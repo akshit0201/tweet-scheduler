@@ -5,6 +5,7 @@ class RegController < ApplicationController
   def create
     @user = User.new(user_p)
     if @user.save
+      session[:user_id] = @user.id
       redirect_to root_path, notice: "Account Created"
     else
       render :new

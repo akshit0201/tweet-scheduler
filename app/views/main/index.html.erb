@@ -1,3 +1,6 @@
 <div class = "d-flex align-items-centre justify-content-center">
-<h1>Main Page</h1>
+<h1>Welcome to Scheduled Tweets</h1>
+  <% if @user %>
+  Logged in as: <%= @user.email %>
+  <% end %>
 </div>
