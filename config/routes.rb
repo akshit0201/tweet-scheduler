@@ -3,5 +3,10 @@ Rails.application.routes.draw do
   get "about-us" , to: "about#index" , as: :about
   get "sign-up" , to: "reg#new" , as: :sign_up
   post "sign-up", to: "reg#create"
+
+  get "sign-in", to: "sessions#new" , as: :sign_in
+  post "sign-in", to: "sessions#create"
+  delete "logout", to: "sessions#destroy"
+
   root to: "main#index"
 end
