@@ -10,5 +10,10 @@ Rails.application.routes.draw do
   post "sign-in", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
 
+  get "reset", to: "reset#new"
+  post "reset", to: "reset#create"
+
+  get "reset/edit", to: "reset#edit" , as: :reset_edit
+  patch "reset/edit", to: "reset#update"
   root to: "main#index"
 end
