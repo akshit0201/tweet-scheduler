@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post "sign-in", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
 
+  get "auth/twitter/callback" , to: "omniauths#twitter"
+
   get "reset", to: "reset#new"
   post "reset", to: "reset#create"
 
